@@ -4,6 +4,6 @@ const router = express.Router();
 const controller = require("./controller");
 
 router.post("/create", controller.create);
-router.get('/create/:id', controller.findBill);
+router.get('/getDetails/:id', controller.findBill);
 
 module.exports = router;

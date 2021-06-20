@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // Connecting to the database
 mongoose.connect(
     config.url,
-    { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
+    { useFindAndModify: true, useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true,})
     .then(db => {
       console.log("Database connected");
     }).catch(error => console.log("Could not connect to mongo db " + error));

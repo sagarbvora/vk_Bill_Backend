@@ -1,3 +1,3 @@
 module.exports = {
-    url : "mongodb://localhost:27017/userData"
+    url : "mongodb+srv://access:access@123@cluster0.fmqnn.mongodb.net/Access?retryWrites=true&w=majority"
 };

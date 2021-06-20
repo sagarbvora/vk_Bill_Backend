@@ -19,7 +19,7 @@ exports.create = (req, res) =>{
 
 exports.findBill = (req, res) =>{
     const id = req.params.id;
-    Billing.find(id).then((users) =>{
+    Billing.find({_id: id}).then((users) =>{
         res.send(users);
     }).catch((err) =>{
         res.status(500).send({
