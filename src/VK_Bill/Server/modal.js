@@ -7,8 +7,7 @@ const billingSchema = mongoose.Schema({
     productDetails: [{
         description: String,
         quantity: Number,
-        rate: Number,
-        amount: Number
+        rate: String
     }]
 }, {
     timestamps: true

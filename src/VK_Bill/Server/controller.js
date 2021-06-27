@@ -9,7 +9,6 @@ exports.create = (req, res) =>{
     }
     Billing.create(req.body).then((users) =>{
         res.send(users);
-        console.log("users", users);
     }).catch((err) =>{
         res.status(500).send({
             message: err.message || "something went wrong"
@@ -19,7 +18,7 @@ exports.create = (req, res) =>{
 
 exports.findBill = (req, res) =>{
     const id = req.params.id;
-    Billing.find({_id: id}).then((users) =>{
+    Billing.findOne({_id: id}).then((users) =>{
         res.send(users);
     }).catch((err) =>{
         res.status(500).send({
